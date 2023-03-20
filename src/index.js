@@ -54,6 +54,11 @@ for (let i = 0; i < allLinks.length; i++) {
   allLinks[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
 
+const italicElements = document.querySelectorAll("nav a");
+for (let i = 0; i < italicElements.length; i++) {
+  italicElements[i].style.fontStyle = "italic";
+}
+
 const h1 = document.querySelector("h1");
 h1.textContent = siteContent.cta.h1;
 
@@ -82,3 +87,15 @@ for (let i = 0; i < tumP.length; i++) {
 }
 
 //console.log(tumP);
+
+const logoImg = document.getElementById("logo-img");
+const CtaImg = document.getElementById("cta-img");
+const MiddleImg = document.getElementById("middle-img");
+
+logoImg.src = "http://localhost:9000/img/logo.png";
+CtaImg.src = "http://localhost:9000/img/cta.png";
+MiddleImg.src = "http://localhost:9000/img/accent.png";
+
+// Sınıf(class) adları ekleyin
+//  (menü içindeki) öğeleri italic(yatay) yapmak için class'ına italic atayın ve yalnız bırakın.
+//  (footer içindeki) öğelerin bold(kalın) görünmesi için class'ına bold atayın ve yalnız bırakın.
